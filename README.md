@@ -10,6 +10,12 @@ Welcome to the detailed README guide for Supervised Machine Learning! This docum
 3. [Regression Models](#3-regression-models)
 4. [Logistic Regression](#4-logistic-regression)
 5. [Classification Models](#5-classification-models)
+   - [5.1 Decision Trees](#51-decision-trees)
+   - [5.2 Random Forest](#52-random-forest)
+   - [5.3 Gradient Boosting](#53-gradient-boosting-xgboost--lightgbm)
+   - [5.4 K-Nearest Neighbors (KNN)](#54-k-nearest-neighbors-knn)
+   - [5.5 Support Vector Machines (SVM)](#55-support-vector-machines-svm)
+   - [5.6 Naive Bayes](#56-naive-bayes)
 
 ---
 
@@ -229,3 +235,42 @@ Classification models are used when the target variable is categorical (e.g., pr
     from sklearn.svm import SVC
     model = SVC(kernel='rbf', C=1.0)
     ```
+
+### 5.6 Naive Bayes
+**Overview:** A family of probabilistic classifiers based on **Bayes' Theorem**, assuming strong (naïve) conditional independence between every pair of features given the class label.
+
+*   **How it Works:** For each class, the model learns the prior probability $P(C)$ and the likelihood $P(x_i \mid C)$ of each feature. At prediction time it picks the class with the highest posterior:
+    $$P(C \mid x_1, \ldots, x_n) \propto P(C) \prod_{i=1}^{n} P(x_i \mid C)$$
+*   **Variants & When to Use Them:**
+
+    | Variant | Likelihood Model | Best For |
+    |---|---|---|
+    | **GaussianNB** | Continuous features → Gaussian (normal) distribution | Numerical / medical data |
+    | **MultinomialNB** | Discrete count features | Text classification (word counts, TF-IDF) |
+    | **BernoulliNB** | Binary (0/1) features | Text classification (word presence/absence) |
+
+*   **Advantages:** Extremely fast to train and predict; works well with small datasets; handles multi-class naturally; robust to irrelevant features; no feature scaling required (GaussianNB).
+*   **Disadvantages:** The independence assumption rarely holds in practice; can be outperformed when features are strongly correlated; poor probability calibration out of the box.
+*   **Python Implementation:**
+    ```python
+    from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
+    from sklearn.metrics import classification_report
+
+    # --- Gaussian NB (continuous features) ---
+    gnb = GaussianNB()
+    gnb.fit(X_train, y_train)          # no scaling needed
+    y_pred = gnb.predict(X_test)
+
+    # --- Multinomial NB (count/text features) ---
+    mnb = MultinomialNB()
+    mnb.fit(X_train_counts, y_train)
+
+    # --- Bernoulli NB (binary features) ---
+    bnb = BernoulliNB()
+    bnb.fit(X_train_binary, y_train)
+
+    print(classification_report(y_test, y_pred))
+    ```
+*   **📁 Project Notebooks:**
+    *   [`08_Naive_Bayes/NB_Spam_Classifier.ipynb`](./Supervised_Learning/08_Naive_Bayes/NB_Spam_Classifier.ipynb) — MultinomialNB spam detector on email word-frequency data.
+    *   [`Competitions/Customer_Churn_Prediction/NB_Customer_Churn_Competition.ipynb`](./Supervised_Learning/Competitions/Customer_Churn_Prediction/NB_Customer_Churn_Competition.ipynb) — GaussianNB Kaggle competition entry for binary churn prediction.
