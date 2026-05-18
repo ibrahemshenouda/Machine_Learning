@@ -26,40 +26,32 @@ P(class | features) ∝ P(class) × ∏ P(feature_i | class)
 | File | Dataset | Task | NB Variant |
 |---|---|---|---|
 | `NB_Spam_Classifier.ipynb` | `emails.csv` (word-frequency features) | Binary spam detection | **MultinomialNB** |
-| `NB_Customer_Churn_Competition.ipynb` | Kaggle competition `train.csv / test.csv` | Binary churn prediction (competition submission) | **GaussianNB + full ML pipeline** |
 
-## 📊 Datasets
+> 🏆 The **Customer Churn Prediction** (Kaggle competition) notebook using **GaussianNB**
+> has been moved to [`Competitions/Customer_Churn_Prediction/`](../Competitions/Customer_Churn_Prediction/).
 
-### 1 · Spam E-mail Dataset (`NB_Spam_Classifier.ipynb`)
+## 📊 Dataset
+
+**Spam E-mail Dataset** (`NB_Spam_Classifier.ipynb`)
 - **Features:** Word-frequency counts extracted from raw emails
 - **Target:** `Prediction` — `1 = Spam`, `0 = Not Spam`
 - **Model:** `MultinomialNB` — the natural choice for discrete count features
 
-### 2 · Customer Churn — Kaggle Competition (`NB_Customer_Churn_Competition.ipynb`)
-- **Features:** Customer demographics & account info (mix of numeric + categorical)
-- **Target:** Binary churn flag
-- **Pipeline:** Preprocessing → RandomizedSearchCV → Naive Bayes → `submission.csv` generation
-
 ## 💻 Code Highlight
 
 ```python
-from sklearn.naive_bayes import MultinomialNB, GaussianNB
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
 
-# --- Spam Classifier (MultinomialNB) ---
 mnb = MultinomialNB()
 mnb.fit(X_train, y_train)
 y_pred = mnb.predict(X_test)
-print(classification_report(y_test, y_pred, target_names=["Ham", "Spam"]))
 
-# --- Churn Prediction (GaussianNB) ---
-gnb = GaussianNB()
-gnb.fit(X_train_processed, y_train)
-submission_proba = gnb.predict_proba(X_test_processed)[:, 1]
+print(classification_report(y_test, y_pred, target_names=["Ham", "Spam"]))
 ```
 
 ## 🔑 Key Takeaways
-1. **MultinomialNB** is the go-to choice for text/count data — it is fast and effective.
-2. **GaussianNB** handles continuous features without requiring scaling.
-3. Naive Bayes is a strong **baseline** in competition pipelines thanks to its speed and interpretability.
-4. Despite the naïve assumption, it often performs surprisingly well on real-world data.
+1. **MultinomialNB** is the go-to choice for text/count data — fast and effective.
+2. **GaussianNB** handles continuous features without requiring feature scaling.
+3. Naive Bayes is a strong **baseline** — low latency, interpretable, and surprisingly accurate.
+4. Despite the naïve assumption, it often performs well on real-world data.
