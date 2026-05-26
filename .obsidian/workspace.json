@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "e67e98b51d4422a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bcaf16ba572b5e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e1e9735e35d2079b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ML/ML_Algorithms_Deep_dive/Lecture_4/ML_Lecture4_All_Details.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ML_Lecture4_All_Details"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "318111fd8a58c734",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac7a224987ad8ae0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e10160fb96b85fe8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e4870528be5ccc8a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "591f0a7653975ecf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0b212117a52d3414",
+    "type": "split",
+    "children": [
+      {
+        "id": "647bddb2e8fbfd97",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf4fbe5dbf94bb6e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ML/ML_Algorithms_Deep_dive/Lecture_4/ML_Lecture4_All_Details.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for ML_Lecture4_All_Details"
+            }
+          },
+          {
+            "id": "ed09ac149897bef7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ML/ML_Algorithms_Deep_dive/Lecture_4/ML_Lecture4_All_Details.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from ML_Lecture4_All_Details"
+            }
+          },
+          {
+            "id": "c3ab3ab9a8c8f576",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "efda27416338acd4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "561d0f7801b93d0d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ML/ML_Algorithms_Deep_dive/Lecture_4/ML_Lecture4_All_Details.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of ML_Lecture4_All_Details"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "e1e9735e35d2079b",
+  "lastOpenFiles": [
+    "ML/ML_Algorithms_Deep_dive/Lecture_4/Lecture-4_Study_Guide.pdf",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/ML_Lecture3_All_Details.md",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/ML_Lecture3_All_Details.pdf",
+    "ML/ML_Algorithms_Deep_dive/Lecture_2/ML_Lecture2_All_Details.md",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide_29_img_2.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide_28_img_2.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-30.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-29.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-28.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-27.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-26.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-25.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-24.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/slide-23.png",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos/Lec3 linear regression with multiple vars.pdf",
+    "ML/ML_Algorithms_Deep_dive/Lecture_3/Photos",
+    "ML/ML_Algorithms_Deep_dive/Lecture_2/ML_Lecture2_All_Details.pdf",
+    "ML/ML_Algorithms_Deep_dive/Lecture_1/ML_Lecture1_Study_Guide.md",
+    "ML/ML_Algorithms_Deep_dive/Lecture_1/ML_Lecture1_Study_Guide.pdf",
+    "ANN/Neural_network_Deep_dive/Lecture_1/NN_Lecture1_Study_Guide.md",
+    "ANN/Neural_network_Deep_dive/Lecture_1/NN_Lecture1_Part1_Study_Guide.pdf",
+    "ANN/Neural_network_Deep_dive/Lecture_1/NN_Lecture1_Part2_Study_Guide.md",
+    "ANN/Neural_network_Deep_dive/Lecture_1/NN_Lecture1_Part2_Study_Guide.pdf",
+    "ANN/Neural_network_Deep_dive/Lecture_1/NN_Lecture1_Study_Guide.pdf",
+    "ANN/Neural_network_Deep_dive/Lecture_1/NN_Lecture1_Part2_Study_Guide_temp.pdf",
+    "ANN/Neural_network_Deep_dive/Lecture_1/lu2123024tiy.tmp",
+    "ML/ML_Algorithms_Deep_dive/Lecture_4/ML_Lecture4_All_Details.md",
+    "ML/ML_Algorithms_Deep_dive/Lecture_2/ML_Lecture2_Study_Guide.md"
+  ]
+}
