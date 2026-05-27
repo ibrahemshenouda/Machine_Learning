@@ -143,6 +143,8 @@ Algorithms relying on distance (KNN, SVM) or gradient descent require scaled dat
 ### 3.2 Logistic Regression
 *   **Sigmoid Mapping:** Models categorical binary outcomes using a sigmoid function: $P = \frac{1}{1 + e^{-Z}}$
 *   📁 **Implementation Lab:** See [`ML/supervised_labs/03_Logistic_Regression/logistic_regression.ipynb`](./ML/supervised_labs/03_Logistic_Regression/logistic_regression.ipynb) & [`ML/supervised_labs/03_Logistic_Regression/MultiClass_LogisticRegression_EngineFault.ipynb`](./ML/supervised_labs/03_Logistic_Regression/MultiClass_LogisticRegression_EngineFault.ipynb).
+*   📁 **Sklearn Curriculum Lab:** See [`Sklearn_Library/02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX01.ipynb`](./Sklearn_Library/02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX01.ipynb) & [`Sklearn_Library/02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX02.ipynb`](./Sklearn_Library/02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX02.ipynb).
+
 
 ### 3.3 Decision Trees & Ensemble Methods
 *   **Decision Tree:** Recursively splits data based on Information Gain/Gini Impurity.

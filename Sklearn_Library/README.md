@@ -8,25 +8,25 @@ Welcome to the **Scikit-Learn Machine Learning Library**! This repository is org
 
 The curriculum is split into two primary segments: data engineering/preparation and model fitting/algorithms.
 
-```
-Sklearn_Library/
-├── 📂 01_Data_Preparation/         # Step 1: Preprocessing & Evaluation
-│   ├── README.md                  # Comprehensive Preprocessing Guide
-│   ├── 01_Data_Sets.ipynb
-│   ├── 02_Data_Cleaning.ipynb
-│   ├── 03_Regression_Metrics.ipynb
-│   ├── 04_Classification_metrics.ipynb
-│   ├── 05_Feature_Selection.ipynb
-│   ├── 06_Data_Scaling.ipynb
-│   └── 07_Data_Spliting.ipynb
-└── 📂 02_ML_Algorithms/            # Step 2: Training & Machine Learning Models
-    ├── 📂 01_Linear_Regression/    # Linear and Polynomial Modeling
-    │   ├── README.md              # Regression Concepts & Results
-    │   ├── 01_Linear_Regression_EX01.ipynb
-    │   └── 01_Linear_Regression_PolynomialFeatures_EX02.ipynb
-    └── 📂 02_Logistic_Regression/  # Logistic Regression Classification
-        └── README.md              # Sigmoid, Decision Boundary, & Log Loss theory
-```
+*   📂 **[01_Data_Preparation/](./01_Data_Preparation/)** - Step 1: Preprocessing & Evaluation
+    *   📄 [README.md](./01_Data_Preparation/README.md) (Comprehensive Preprocessing Guide)
+    *   📓 [01_Data_Sets.ipynb](./01_Data_Preparation/01_Data_Sets.ipynb)
+    *   📓 [02_Data_Cleaning.ipynb](./01_Data_Preparation/02_Data_Cleaning.ipynb)
+    *   📓 [03_Regression_Metrics.ipynb](./01_Data_Preparation/03_Regression_Metrics.ipynb)
+    *   📓 [04_Classification_metrics.ipynb](./01_Data_Preparation/04_Classification_metrics.ipynb)
+    *   📓 [05_Feature_Selection.ipynb](./01_Data_Preparation/05_Feature_Selection.ipynb)
+    *   📓 [06_Data_Scaling.ipynb](./01_Data_Preparation/06_Data_Scaling.ipynb)
+    *   📓 [07_Data_Spliting.ipynb](./01_Data_Preparation/07_Data_Spliting.ipynb)
+*   📂 **[02_ML_Algorithms/](./02_ML_Algorithms/)** - Step 2: Training & Machine Learning Models
+    *   📂 **[01_Linear_Regression/](./02_ML_Algorithms/01_Linear_Regression/)**
+        *   📄 [README.md](./02_ML_Algorithms/01_Linear_Regression/README.md) (Regression Concepts & Results)
+        *   📓 [01_Linear_Regression_EX01.ipynb](./02_ML_Algorithms/01_Linear_Regression/01_Linear_Regression_EX01.ipynb)
+        *   📓 [01_Linear_Regression_PolynomialFeatures_EX02.ipynb](./02_ML_Algorithms/01_Linear_Regression/01_Linear_Regression_PolynomialFeatures_EX02.ipynb)
+    *   📂 **[02_Logistic_Regression/](./02_ML_Algorithms/02_Logistic_Regression/)**
+        *   📄 [README.md](./02_ML_Algorithms/02_Logistic_Regression/README.md) (Sigmoid, Decision Boundary, & Log Loss theory)
+        *   📓 [01_Logistic_Regression_EX01.ipynb](./02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX01.ipynb)
+        *   📓 [01_Logistic_Regression_EX02.ipynb](./02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX02.ipynb)
+
 
 ---
 
@@ -52,3 +52,6 @@ Learn binary and multi-class classification principles:
 *   **The Sigmoid Function**: Mapping linear output $z$ to a probability space between 0 and 1.
 *   **Decision Boundaries**: Thresholding predicted probabilities at 0.5 to label target predictions.
 *   **Log Loss Optimization**: Minimizing cross-entropy cost rather than least squares.
+*   **Breast Cancer Classification**: Standard scaling, gradient descent solver convergence, and confusion matrix profiling using Seaborn heatmaps.
+*   **Heart Disease Classification**: Clinical classification pipeline using Pandas, Scikit-Learn scaling, training fold evaluation, and predictions probability extraction.
+
