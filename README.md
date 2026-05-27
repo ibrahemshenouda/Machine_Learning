@@ -6,7 +6,7 @@ Welcome to the central reference guide for the Machine Learning and Artificial N
 
 ## 📂 Repository Structure
 
-The workspace is organized into two primary pillars: **Machine Learning (ML)** and **Artificial Neural Networks (ANN)**.
+The workspace is organized into three primary modules: **Machine Learning (ML)**, **Scikit-Learn Curriculum (Sklearn_Library)**, and **Artificial Neural Networks (ANN)**.
 
 ```
 Machine_Learning/
@@ -25,6 +25,9 @@ Machine_Learning/
 │   └── unsupervised_labs/           # Clustering & PCA labs
 │       ├── Clustering/
 │       └── Dimensionality_Reduction/
+Sklearn_Library/                     # Scikit-Learn Preprocessing & ML Curriculum
+├── 01_Data_Preparation/             # Datasets, Imputation, Selection, Scaling, Splitting
+└── 02_ML_Algorithms/                # Linear Regression & Logistic Regression models
 └── ANN/
     ├── Neural_network_Deep_dive/    # Neural network theory & backpropagation notes
     └── neural_network_labs/         # Neural network implementations
@@ -50,6 +53,7 @@ Machine_Learning/
 5. [Artificial Neural Networks (ANN)](#5-artificial-neural-networks-ann)
    - [Feedforward MLPs for Classification](#51-feedforward-mlps-for-classification)
    - [Autoencoder Architectures](#52-autoencoder-architectures)
+6. [Scikit-Learn Preprocessing & Algorithms Library](#6-scikit-learn-preprocessing--algorithms-library)
 
 ---
 
@@ -71,6 +75,7 @@ Algorithms relying on distance (KNN, SVM) or gradient descent require scaled dat
     X_test_scaled = scaler.transform(X_test)
     ```
     *   📁 **Implementation Lab:** See [`ML/supervised_labs/02_Linear_Regression/Data_Preprocessing.ipynb`](./ML/supervised_labs/02_Linear_Regression/Data_Preprocessing.ipynb).
+    *   📁 **Sklearn Prep Lab:** See [`Sklearn_Library/01_Data_Preparation/06_Data_Scaling.ipynb`](./Sklearn_Library/01_Data_Preparation/06_Data_Scaling.ipynb).
 
 ### 1.2 Categorical Encoding
 *   **Label Encoding:** Converts categories to integers (Red=0, Blue=1). Best for the target variable `y`.
@@ -88,7 +93,15 @@ Algorithms relying on distance (KNN, SVM) or gradient descent require scaled dat
     X = pd.get_dummies(X, columns=['CategoryColumn'], drop_first=True)
     ```
 
-### 1.3 Handling Imbalanced Data (SMOTE)
+### 1.3 Handling Missing Data & Imputation
+*   **SimpleImputer:** Replaces missing values using statistics like mean, median, mode, or a constant.
+    *   📁 **Sklearn Prep Lab:** See [`Sklearn_Library/01_Data_Preparation/02_Data_Cleaning.ipynb`](./Sklearn_Library/01_Data_Preparation/02_Data_Cleaning.ipynb).
+
+### 1.4 Feature Selection
+*   **Statistical/Model Selectors:** Filters out noise columns using univariate tests (`SelectKBest`, `chi2`) or model importances (`SelectFromModel`).
+    *   📁 **Sklearn Prep Lab:** See [`Sklearn_Library/01_Data_Preparation/05_Feature_Selection.ipynb`](./Sklearn_Library/01_Data_Preparation/05_Feature_Selection.ipynb).
+
+### 1.5 Handling Imbalanced Data (SMOTE)
 *   **SMOTE:** Synthetically generates minority class examples to balance the dataset.
 *   **Python Implementation:**
     ```python
@@ -107,23 +120,13 @@ Algorithms relying on distance (KNN, SVM) or gradient descent require scaled dat
 *   **Precision:** Out of predicted positives, how many are actual positives.
 *   **Recall:** Out of actual positives, how many did we find.
 *   **F1-Score:** Harmonic mean of Precision and Recall.
-*   **Python Implementation:**
-    ```python
-    from sklearn.metrics import confusion_matrix, classification_report
-    print(classification_report(y_test, y_pred))
-    ```
+    *   📁 **Sklearn Prep Lab:** See [`Sklearn_Library/01_Data_Preparation/04_Classification_metrics.ipynb`](./Sklearn_Library/01_Data_Preparation/04_Classification_metrics.ipynb).
 
 ### 2.2 Regression Metrics
 *   **MAE:** Average absolute difference between prediction and actual.
 *   **MSE:** Average squared difference. Heavily penalizes outliers.
 *   **R-Squared ($R^2$):** Proportion of variance in target explained by the model.
-*   **Python Implementation:**
-    ```python
-    from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-    mae = mean_absolute_error(y_test, y_pred)
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-    ```
+    *   📁 **Sklearn Prep Lab:** See [`Sklearn_Library/01_Data_Preparation/03_Regression_Metrics.ipynb`](./Sklearn_Library/01_Data_Preparation/03_Regression_Metrics.ipynb).
 
 ---
 
@@ -134,7 +137,8 @@ Algorithms relying on distance (KNN, SVM) or gradient descent require scaled dat
 *   **Ridge Regression (L2):** Adds a squared penalty ($\lambda \sum \beta_i^2$) to prevent overfitting by shrinking coefficients.
 *   **Lasso Regression (L1):** Adds an absolute penalty ($\lambda \sum |\beta_i|$), acting as feature selection by driving weights exactly to zero.
 *   **ElasticNet:** Combines both L1 and L2 penalties.
-*   *   📁 **Implementation Lab:** See [`ML/supervised_labs/02_Linear_Regression/task.ipynb`](./ML/supervised_labs/02_Linear_Regression/task.ipynb) & [`ML/supervised_labs/02_Linear_Regression/Polynomial_Regression_Auto_MPG.ipynb`](./ML/supervised_labs/02_Linear_Regression/Polynomial_Regression_Auto_MPG.ipynb).
+*   📁 **Implementation Lab:** See [`ML/supervised_labs/02_Linear_Regression/task.ipynb`](./ML/supervised_labs/02_Linear_Regression/task.ipynb) & [`ML/supervised_labs/02_Linear_Regression/Polynomial_Regression_Auto_MPG.ipynb`](./ML/supervised_labs/02_Linear_Regression/Polynomial_Regression_Auto_MPG.ipynb).
+*   📁 **Sklearn Curriculum Lab:** See [`Sklearn_Library/02_ML_Algorithms/01_Linear_Regression/01_Linear_Regression_EX01.ipynb`](./Sklearn_Library/02_ML_Algorithms/01_Linear_Regression/01_Linear_Regression_EX01.ipynb) & [`Sklearn_Library/02_ML_Algorithms/01_Linear_Regression/01_Linear_Regression_PolynomialFeatures_EX02.ipynb`](./Sklearn_Library/02_ML_Algorithms/01_Linear_Regression/01_Linear_Regression_PolynomialFeatures_EX02.ipynb).
 
 ### 3.2 Logistic Regression
 *   **Sigmoid Mapping:** Models categorical binary outcomes using a sigmoid function: $P = \frac{1}{1 + e^{-Z}}$
@@ -156,7 +160,7 @@ Algorithms relying on distance (KNN, SVM) or gradient descent require scaled dat
 
 ### 3.6 Naive Bayes
 *   Probabilistic classifiers based on Bayes' Theorem, assuming independence among features.
-*   📁 **Implementation Lab:** See [`ML/supervised_labs/08_Naive_Bayes/NB_Spam_Classifier.ipynb`](./ML/supervised_labs/08_Naive_Bayes/NB_Spam_Classifier.ipynb) & [`ML/supervised_labs/Competitions/Customer_Churn_Prediction/NB_Customer_Churn_Competition.ipynb`](./ML/supervised_labs/Competitions/Customer_Churn_Prediction/NB_Customer_Churn_Competition.ipynb).
+*   📁 **Implementation Lab:** See [`ML/supervised_labs/08_Naive_Bayes/NB_Spam_Classifier.ipynb`](./ML/supervised_labs/08_Naive_Bayes/NB_Spam_Classifier.ipynb) & [`ML/supervised_labs/Competitions/Customer_Churn_Prediction/NB_Customer_Churn_Prediction.ipynb`](./ML/supervised_labs/Competitions/Customer_Churn_Prediction/NB_Customer_Churn_Prediction.ipynb).
 
 ---
 
@@ -187,3 +191,15 @@ Deep Learning models built using Keras and TensorFlow.
 *   **Denoising Autoencoder:** Reconstructs clean data from artificially corrupted noisy input features.
 *   **Anomaly Detection:** Flags outliers by identifying transactions/records that exhibit high reconstruction errors when passed through an autoencoder trained only on normal samples.
 *   📁 **Implementation Lab:** See [`ANN/neural_network_labs/Autoencoders/Autoencoder_MNIST.ipynb`](./ANN/neural_network_labs/Autoencoders/Autoencoder_MNIST.ipynb) & [`ANN/neural_network_labs/Autoencoders/Autoencoder_Anomaly_Detection_CreditCard.ipynb`](./ANN/neural_network_labs/Autoencoders/Autoencoder_Anomaly_Detection_CreditCard.ipynb).
+
+---
+
+## 🔬 6. Scikit-Learn Preprocessing & Algorithms Library
+
+A dedicated curriculum directory detailing standalone pipeline components using Scikit-Learn.
+
+*   📁 **Library Root:** See [`Sklearn_Library/`](./Sklearn_Library)
+*   📁 **01_Data_Preparation:** Detailed preprocessing steps (built-in datasets, imputation, feature selection, scaling, splitting) and evaluation metrics. Link to [`01_Data_Preparation/README.md`](./Sklearn_Library/01_Data_Preparation/README.md).
+*   📁 **02_ML_Algorithms/01_Linear_Regression:** Linear and Polynomial Regression modeling examples. Link to [`02_ML_Algorithms/01_Linear_Regression/README.md`](./Sklearn_Library/02_ML_Algorithms/01_Linear_Regression/README.md).
+*   📁 **02_ML_Algorithms/02_Logistic_Regression:** Concept guide explaining classification principles. Link to [`02_ML_Algorithms/02_Logistic_Regression/README.md`](./Sklearn_Library/02_ML_Algorithms/02_Logistic_Regression/README.md).
+
