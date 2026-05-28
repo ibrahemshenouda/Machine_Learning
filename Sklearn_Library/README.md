@@ -26,6 +26,12 @@ The curriculum is split into two primary segments: data engineering/preparation 
         *   📄 [README.md](./02_ML_Algorithms/02_Logistic_Regression/README.md) (Sigmoid, Decision Boundary, & Log Loss theory)
         *   📓 [01_Logistic_Regression_EX01.ipynb](./02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX01.ipynb)
         *   📓 [01_Logistic_Regression_EX02.ipynb](./02_ML_Algorithms/02_Logistic_Regression/01_Logistic_Regression_EX02.ipynb)
+    *   📂 **[03_Support_Vector_Machine/](./02_ML_Algorithms/03_Support_Vector_Machine/)**
+        *   📂 **[01_SVR/](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/)**
+            *   📄 [README.md](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/README.md) (Support Vector Regression Principles & Metrics)
+            *   📓 [01_Support_Vector_Regressor(SVM)_EX01.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/01_Support_Vector_Regressor(SVM)_EX01.ipynb)
+            *   📓 [02_Support_Vector_Regressor(SVM)_EX02.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/02_Support_Vector_Regressor(SVM)_EX02.ipynb)
+            *   📓 [03_SVR_Kaggle.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/03_SVR_Kaggle.ipynb)
 
 
 ---
@@ -55,3 +61,8 @@ Learn binary and multi-class classification principles:
 *   **Breast Cancer Classification**: Standard scaling, gradient descent solver convergence, and confusion matrix profiling using Seaborn heatmaps.
 *   **Heart Disease Classification**: Clinical classification pipeline using Pandas, Scikit-Learn scaling, training fold evaluation, and predictions probability extraction.
 
+### 📉 [4. Support Vector Machine (SVR)](file:///home/ibrahimshnouda/GitHub/AI/Sklearn_Library/02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/README.md)
+Learn to predict continuous targets using margin-based support vector regressions:
+*   **Support Vector Regressors**: Fitting regression tubes that penalize errors falling outside an $\epsilon$-margin.
+*   **Kernel Trick**: Applying Linear, Polynomial, and RBF kernels to map data into higher dimensions for non-linear regression.
+*   **Model Evaluation**: Analyzing $R^2$ scores and absolute errors across standard and Kaggle datasets.
