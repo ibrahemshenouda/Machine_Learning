@@ -6,7 +6,7 @@ This directory is dedicated to the implementation of Support Vector Classificati
 
 ## 📂 Directory Contents
 
-1.  **[02_Support_Vector_Regressor(SVM)_EX02.ipynb](./02_Support_Vector_Regressor(SVM)_EX02.ipynb)**: *Note: This notebook is currently a placeholder/template adopted from the SVR module demonstrating the Kernel Trick (Linear, Polynomial, RBF) on the Earthquakes dataset. It serves as a foundation for implementing SVC.*
+1.  **[02_Support_Vector_Classifier(SVC).ipynb](./02_Support_Vector_Classifier(SVC).ipynb)**: An end-to-end classification pipeline using the standard Breast Cancer dataset. This notebook demonstrates the differences between `linear` and `rbf` kernels, uses PCA (Principal Component Analysis) to visualize decision boundaries in 2D, and evaluates model performance using confusion matrices and classification reports.
 
 ---
 
@@ -22,7 +22,7 @@ Unlike Support Vector Regression (SVR) which fits a tube around continuous data,
 from sklearn.svm import SVC
 
 # Instantiate SVC model (defaults to RBF kernel)
-classifier = SVC(kernel='rbf', C=1.0)
+classifier = SVC(kernel='rbf', C=0.1, gamma='auto')
 
 # Fit model on training set
 classifier.fit(X_train, y_train)
@@ -45,8 +45,15 @@ Real-world classification datasets are rarely linearly separable in their origin
 *   **C (Regularization Parameter)**: Controls the trade-off between achieving a low training error and a low testing error that generalizes well. A large `C` aims for better classification of all training points (smaller margin), while a small `C` encourages a larger margin (potentially allowing some misclassifications).
 *   **Gamma**: Defines how far the influence of a single training example reaches for non-linear kernels (`rbf`, `poly`). Low values mean 'far', high values mean 'close'.
 
+### 4. Visualizing Decision Boundaries (PCA)
+In order to visualize decision boundaries for high-dimensional data (like the Breast Cancer dataset with 30 features), we can use **Principal Component Analysis (PCA)** to reduce the feature space to 2 dimensions. This allows the `DecisionBoundaryDisplay` module to plot how different kernels separate the target classes.
+
 ---
 
-## 🚀 Next Steps
-- Implement a dedicated classification dataset (e.g., Iris or Breast Cancer) using `SVC`.
-- Evaluate the classifier using classification metrics such as the Confusion Matrix, Precision, Recall, and F1-Score.
+## 📊 Model Evaluation Highlights
+*   **Dataset**: Breast Cancer Dataset (Binary Classification: Benign vs. Malignant)
+*   **Metrics**: 
+    *   **Accuracy Score**: Comparing test and train performance.
+    *   **Classification Report**: Precision, Recall, and F1-Score breakdown for each class.
+    *   **Confusion Matrix**: Visualized using `ConfusionMatrixDisplay` to examine True Positives, False Positives, etc.
+*   **Visualizations**: Uses `DecisionBoundaryDisplay` combined with PCA to visually contrast the linear decision boundary against the non-linear boundaries formed by the RBF kernel.

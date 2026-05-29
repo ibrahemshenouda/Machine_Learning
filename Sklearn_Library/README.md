@@ -34,7 +34,7 @@ The curriculum is split into two primary segments: data engineering/preparation 
             *   📓 [03_SVR_Kaggle.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/03_SVR_Kaggle.ipynb)
         *   📂 **[02_SVC/](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/)**
             *   📄 [README.md](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/README.md) (Support Vector Classification Concepts)
-            *   📓 [02_Support_Vector_Regressor(SVM)_EX02.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/02_Support_Vector_Regressor(SVM)_EX02.ipynb)
+            *   📓 [02_Support_Vector_Classifier(SVC).ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/02_Support_Vector_Classifier(SVC).ipynb)
 
 
 ---
