@@ -32,6 +32,9 @@ The curriculum is split into two primary segments: data engineering/preparation 
             *   📓 [01_Support_Vector_Regressor(SVM)_EX01.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/01_Support_Vector_Regressor(SVM)_EX01.ipynb)
             *   📓 [02_Support_Vector_Regressor(SVM)_EX02.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/02_Support_Vector_Regressor(SVM)_EX02.ipynb)
             *   📓 [03_SVR_Kaggle.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/03_SVR_Kaggle.ipynb)
+        *   📂 **[02_SVC/](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/)**
+            *   📄 [README.md](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/README.md) (Support Vector Classification Concepts)
+            *   📓 [02_Support_Vector_Regressor(SVM)_EX02.ipynb](./02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/02_Support_Vector_Regressor(SVM)_EX02.ipynb)
 
 
 ---
@@ -61,8 +64,9 @@ Learn binary and multi-class classification principles:
 *   **Breast Cancer Classification**: Standard scaling, gradient descent solver convergence, and confusion matrix profiling using Seaborn heatmaps.
 *   **Heart Disease Classification**: Clinical classification pipeline using Pandas, Scikit-Learn scaling, training fold evaluation, and predictions probability extraction.
 
-### 📉 [4. Support Vector Machine (SVR)](file:///home/ibrahimshnouda/GitHub/AI/Sklearn_Library/02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/README.md)
-Learn to predict continuous targets using margin-based support vector regressions:
-*   **Support Vector Regressors**: Fitting regression tubes that penalize errors falling outside an $\epsilon$-margin.
-*   **Kernel Trick**: Applying Linear, Polynomial, and RBF kernels to map data into higher dimensions for non-linear regression.
+### 📉 4. Support Vector Machine (SVM)
+Learn to predict continuous targets (SVR) and classify categorical data (SVC) using margin-based support vectors:
+*   **[Support Vector Regressors (SVR)](file:///home/ibrahimshnouda/GitHub/AI/Sklearn_Library/02_ML_Algorithms/03_Support_Vector_Machine/01_SVR/README.md)**: Fitting regression tubes that penalize errors falling outside an $\epsilon$-margin.
+*   **[Support Vector Classifiers (SVC)](file:///home/ibrahimshnouda/GitHub/AI/Sklearn_Library/02_ML_Algorithms/03_Support_Vector_Machine/02_SVC/README.md)**: Finding the optimal separating hyperplane to classify data while maximizing the decision boundary margin.
+*   **Kernel Trick**: Applying Linear, Polynomial, and RBF kernels to map data into higher dimensions for non-linear modeling.
 *   **Model Evaluation**: Analyzing $R^2$ scores and absolute errors across standard and Kaggle datasets.
